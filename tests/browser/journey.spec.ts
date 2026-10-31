@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 test("map supports destinations, Escape, and returning focus", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/rao/");
   const open = page.getByRole("button", { name: "Open world map" });
   await open.click();
   const dialog = page.getByRole("dialog");
@@ -20,7 +20,7 @@ test("motion starts by default and pause preference persists", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/");
+  await page.goto("/rao/");
   await expect(
     page.getByRole("button", { name: "Pause animation" }),
   ).toBeVisible();
@@ -35,16 +35,16 @@ test("motion starts by default and pause preference persists", async ({
   ).toBeVisible();
 });
 test("project navigation and direct URLs work", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/rao/");
   await page.getByRole("link", { name: "Explore Ustad-e-Karigar" }).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "Ustad-e-Karigar",
   );
-  await page.goto("/quests/meadow-and-wood");
+  await page.goto("/rao/quests/meadow-and-wood");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "Meadow & Wood",
   );
-  const response = await page.goto("/quests/missing-quest");
+  const response = await page.goto("/rao/quests/missing-quest");
   expect(response?.status()).toBe(404);
 });
 test("content and links remain useful without JavaScript", async ({
@@ -52,7 +52,7 @@ test("content and links remain useful without JavaScript", async ({
 }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:3000/");
+  await page.goto("http://127.0.0.1:3000/rao/");
   await expect(
     page.getByRole("heading", { name: "The quest board." }),
   ).toBeVisible();
@@ -65,7 +65,7 @@ test("content and links remain useful without JavaScript", async ({
 test("homepage and map have no serious accessibility violations", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/rao/");
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   await page.getByRole("button", { name: "Open world map" }).click();
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
@@ -73,7 +73,7 @@ test("homepage and map have no serious accessibility violations", async ({
 for (const width of [320, 768, 1024, 1440])
   test(`layout stays inside ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto("/");
+    await page.goto("/rao/");
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
