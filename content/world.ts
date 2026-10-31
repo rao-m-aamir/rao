@@ -24,8 +24,11 @@ export const skills = [
     items: [
       "C++",
       "Kotlin / Android",
+      "Jetpack Compose",
       "HTML · CSS · JavaScript",
       "PHP · MySQL",
+      "Next.js · TypeScript",
+      "Gemini API",
       "Git",
     ],
   },
@@ -45,8 +48,17 @@ export const skills = [
     ],
   },
 ];
-export const interests = ["Game Dev", "Visual Direction", "Civic Tech"];
+export const interests = [
+  "AI-led development",
+  "Visual Direction",
+  "Civic Tech",
+];
 export const achievements = [
+  {
+    title: "BanoQabil x Alibaba AI Hackathon",
+    result: "National finalist",
+    context: "Ustad-e-Karigar · AI for everyday repair",
+  },
   {
     title: "MasterCode — IST",
     result: "Runner-up",

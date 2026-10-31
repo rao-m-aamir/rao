@@ -8,18 +8,13 @@ function getInitialMotion(): boolean {
   if (typeof window === "undefined") return true;
   const stored = localStorage.getItem("motion");
   if (stored === "paused") return false;
-  if (stored === "running") return true;
-  return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return true;
 }
 
 function subscribeMotion(callback: () => void) {
-  const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const onEvent = () => callback();
-  window.addEventListener("motion-change", onEvent);
-  mql.addEventListener("change", onEvent);
+  window.addEventListener("motion-change", callback);
   return () => {
-    window.removeEventListener("motion-change", onEvent);
-    mql.removeEventListener("change", onEvent);
+    window.removeEventListener("motion-change", callback);
   };
 }
 
