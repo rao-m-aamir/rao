@@ -39,6 +39,16 @@ export function QuestBoard() {
               >
                 Open quest record <ArrowUpRight size={20} />
               </Link>
+              {project.sourceUrl ? (
+                <a
+                  className={styles.projectLink}
+                  href={project.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View project repository <ArrowUpRight size={20} />
+                </a>
+              ) : null}
             </div>
           </article>
         ))}

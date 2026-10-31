@@ -109,7 +109,7 @@ export function Milestone() {
         <p className="eyebrow">05 / A STONE ALONG THE WAY</p>
         <h2>A little milestone.</h2>
         {achievements.map((a) => (
-          <div key={a.title}>
+          <div key={a.title} className={styles.milestoneEntry}>
             <p>
               <strong>
                 {a.result} — {a.title}
@@ -149,7 +149,7 @@ export function SidePaths() {
           sideQuests.map((q) => (
             <article key={q.title}>
               <h3>
-                <a href={q.href}>{q.title}</a>
+                {q.href ? <a href={q.href}>{q.title}</a> : q.title}
               </h3>
               <p>{q.description}</p>
             </article>
@@ -175,7 +175,7 @@ export function Unexplored() {
     <section id="unexplored" className={styles.unexplored}>
       <p className="eyebrow">07 / BEYOND THE EDGE OF THE MAP</p>
       <h2>Unexplored territory.</h2>
-      <p>Places I’m curious enough to eventually wander into.</p>
+      <p>Whatever piques my curiosity.</p>
       <div className={styles.interests}>
         {interests.map((name, i) => (
           <div key={name}>
