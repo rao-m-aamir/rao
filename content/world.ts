@@ -5,13 +5,7 @@ export const sections = [
   { id: "training", title: "Training Grounds", label: "Skills", icon: "04" },
   { id: "milestone", title: "A Milestone", label: "Achievement", icon: "05" },
   { id: "side-paths", title: "Side Paths", label: "Experiments", icon: "06" },
-  {
-    id: "unexplored",
-    title: "Unexplored Territory",
-    label: "Interests",
-    icon: "07",
-  },
-  { id: "campfire", title: "The Campfire", label: "Contact", icon: "08" },
+  { id: "campfire", title: "The Campfire", label: "Contact", icon: "07" },
 ];
 export const socials = [
   { name: "GitHub", href: "https://github.com/rao-m-aamir" },
@@ -47,11 +41,6 @@ export const skills = [
       "Launch & outreach",
     ],
   },
-];
-export const interests = [
-  "AI-led development",
-  "Visual Direction",
-  "Civic Tech",
 ];
 export const achievements = [
   {
