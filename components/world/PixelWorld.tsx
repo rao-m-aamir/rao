@@ -8,8 +8,7 @@ function getInitialMotion(): boolean {
   if (typeof window === "undefined") return true;
   const stored = localStorage.getItem("motion");
   if (stored === "paused") return false;
-  if (stored === "running") return true;
-  return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return true;
 }
 
 export function PixelWorld() {
@@ -89,15 +88,6 @@ export function PixelWorld() {
     };
     window.addEventListener("motion-change", handleMotionChange);
 
-    const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const handleMql = () => {
-      if (localStorage.getItem("motion") === null) {
-        isAnimated = !mql.matches;
-        syncMotion();
-      }
-    };
-    mql.addEventListener("change", handleMql);
-
     resize();
     syncMotion();
     return () => {
@@ -107,7 +97,6 @@ export function PixelWorld() {
       window.removeEventListener("scroll", onScroll);
       document.removeEventListener("visibilitychange", syncMotion);
       window.removeEventListener("motion-change", handleMotionChange);
-      mql.removeEventListener("change", handleMql);
     };
   }, []);
   return (

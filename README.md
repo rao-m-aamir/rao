@@ -12,9 +12,9 @@ Production: `npm run build`, then `npm start`.
 - `components/world/PixelWorld.tsx` owns one fixed low-resolution canvas, rendering at up to 24 frames per second. Scroll progress moves terrain and blends daylight into sunset and night.
 - `draw-world.ts`, `pixel-sprites.ts` and `world-model.ts` draw mountains, clouds, trees, river, path, mossy rocks, wildlife, mist and stars as procedural pixels. The rejected bitmap scenery and mascot files are removed.
 - `components/sections` uses semantic HTML over the world. Transparent sections and translucent reading panels preserve the continuous landscape.
-- `components/ui/Navigation.tsx` provides anchors, a native map dialog, location and persistent pause. Reduced motion pauses ambient animation by default; explicit Resume enables it. Hidden tabs pause rendering. Scrolling updates the static scene while paused.
+- `components/ui/Navigation.tsx` provides anchors, a native map dialog, location and persistent pause. Ambient animation starts by default and can be paused explicitly. Hidden tabs pause rendering. Scrolling updates the static scene while paused.
 - Without JavaScript, all content and project links remain readable over a dark fallback.
-- `content/projects.ts` supplies both project cards and static detail routes. `content/world.ts` holds navigation, skills, achievements, interests and contact links.
+- `content/projects.ts` supplies both project cards and static detail routes. `content/world.ts` holds navigation, skills, achievements, interests and contact links aligned with Rao’s current GitHub profile README.
 
 No mascot, generated bitmap scenery, backend, analytics or deployment is included. Authentic project media, source/demo URLs and individual contribution details remain optional content follow-ups. Unknown claims are omitted and future features are distinguished from implemented features.
 

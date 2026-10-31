@@ -69,6 +69,24 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Add root redirect
+        run: |
+          mkdir -p out/rao
+          find out -mindepth 1 -maxdepth 1 ! -name rao -exec cp -R {} out/rao/ \;
+          cat > out/index.html <<'EOF'
+          <!doctype html>
+          <html lang="en">
+            <head>
+              <meta charset="utf-8">
+              <meta http-equiv="refresh" content="0;url=/rao/">
+              <meta name="robots" content="noindex">
+              <title>Rao's Wandering Log</title>
+            </head>
+            <body>
+              <p>Redirecting to <a href="/rao/">Rao's Wandering Log</a>…</p>
+            </body>
+          </html>
+          EOF
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

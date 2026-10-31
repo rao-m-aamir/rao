@@ -23,12 +23,17 @@ export function Journal() {
         </h2>
         <p>
           I’m Rao, a Computer Science student with an inconvenient tendency to
-          become interested in things.
+          become interested in things at the Institute of Space Technology.
         </p>
         <p>
           That has taken me through software development, Android, AI, web
           products, competitive programming, creative work, and community. I
           like turning “what if?” into something you can actually use.
+        </p>
+        <p>
+          These days, I’m leading ventures and product launches at{" "}
+          <strong>AFRIUM</strong> and running social media and marketing at{" "}
+          <strong>DevCore</strong>.
         </p>
         <p>
           I’m still figuring out whether these paths lead to a main quest.
@@ -40,11 +45,15 @@ export function Journal() {
         <div className={styles.currentPaths}>
           <span className="eyebrow">CURRENT PATHS</span>
           <div className="tags">
-            {["Software", "AI", "Product", "Creative work", "Community"].map(
-              (s) => (
-                <span key={s}>{s}</span>
-              ),
-            )}
+            {[
+              "Software",
+              "AI",
+              "Product",
+              "Creative work",
+              "Community",
+            ].map((s) => (
+              <span key={s}>{s}</span>
+            ))}
           </div>
         </div>
       </div>
@@ -98,9 +107,9 @@ export function Milestone() {
       </div>
       <div>
         <p className="eyebrow">05 / A STONE ALONG THE WAY</p>
+        <h2>A little milestone.</h2>
         {achievements.map((a) => (
           <div key={a.title}>
-            <h2>A little milestone.</h2>
             <p>
               <strong>
                 {a.result} — {a.title}

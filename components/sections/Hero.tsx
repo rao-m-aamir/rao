@@ -16,6 +16,8 @@ export function Hero() {
           Computer Science student.
           <br />
           Curious builder. Habitual side-quest taker.
+          <br />
+          Institute of Space Technology.
         </p>
         <p className={styles.hook}>
           An adventurer that gets into way too many side-quests because he just
@@ -37,12 +39,12 @@ export function Hero() {
           <div>
             <span>STATUS</span>
             <strong className={styles.statusBeacon}>
-              <span className={styles.beaconDot} aria-hidden="true" /> Exploring
+              <span className={styles.beaconDot} aria-hidden="true" /> Building
             </strong>
           </div>
           <div>
             <span>MAIN QUEST</span>
-            <strong>???</strong>
+            <strong>AI + impact</strong>
           </div>
         </div>
       </div>
