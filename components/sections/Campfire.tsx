@@ -29,7 +29,7 @@ export function Campfire() {
   return (
     <section id="campfire" className={styles.campfire}>
       <div className={styles.campContent}>
-        <p className="eyebrow">08 / REST A WHILE</p>
+        <p className="eyebrow">07 / REST A WHILE</p>
         <h2>
           The end of the
           <br />
