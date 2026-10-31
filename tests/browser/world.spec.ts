@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 test("one full-viewport world replaces all illustration and mascot images", async ({
   page,
 }) => {
-  await page.goto("/rao/");
+  await page.goto("/");
   await expect(page.locator("canvas[data-world]")).toHaveCount(1);
   await expect(page.locator("main img")).toHaveCount(0);
   const canvas = page.locator("canvas[data-world]");
@@ -16,7 +16,7 @@ test("scrolling advances the world and paused motion stops its clock", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "no-preference" });
-  await page.goto("/rao/");
+  await page.goto("/");
   const canvas = page.locator("canvas[data-world]");
   await expect(canvas).toHaveAttribute("data-progress", "0.000");
   await page.locator("#campfire").scrollIntoViewIfNeeded();
@@ -38,7 +38,7 @@ test("ambient pixels animate by default and can be paused and resumed", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/rao/");
+  await page.goto("/");
   const canvas = page.locator("canvas[data-world]");
   await expect(canvas).toHaveAttribute("data-animated", "true");
   await page.getByRole("button", { name: "Pause animation" }).click();
