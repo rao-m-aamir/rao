@@ -6,7 +6,6 @@ import {
   Training,
   Milestone,
   SidePaths,
-  Unexplored,
 } from "@/components/sections/TrailSections";
 import { Campfire } from "@/components/sections/Campfire";
 import { PixelWorld } from "@/components/world/PixelWorld";
@@ -23,7 +22,6 @@ export default function Home() {
         <Training />
         <Milestone />
         <SidePaths />
-        <Unexplored />
         <Campfire />
       </main>
     </div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s · Rao’s Wandering Log",
   },
   description:
-    "Muhammad Aamir Saifi is a Computer Science student at the Institute of Space Technology, curious builder and habitual side-quest taker exploring AI-led development, visual direction and civic tech.",
+    "Muhammad Aamir Saifi is a Computer Science student at the Institute of Space Technology, curious builder and habitual side-quest taker.",
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

@@ -2,12 +2,10 @@ import {
   Code2,
   PenTool,
   Users,
-  Compass,
   Trophy,
   Signpost,
-  Eye,
 } from "lucide-react";
-import { skills, interests, achievements, sideQuests } from "@/content/world";
+import { skills, achievements, sideQuests } from "@/content/world";
 import styles from "./Journey.module.css";
 export function Journal() {
   return (
@@ -166,30 +164,6 @@ export function SidePaths() {
             <span className={styles.dottedTrail}>· · · · ·</span>
           </>
         )}
-      </div>
-    </section>
-  );
-}
-export function Unexplored() {
-  return (
-    <section id="unexplored" className={styles.unexplored}>
-      <p className="eyebrow">07 / BEYOND THE EDGE OF THE MAP</p>
-      <h2>Unexplored territory.</h2>
-      <p>Whatever piques my curiosity.</p>
-      <div className={styles.interests}>
-        {interests.map((name, i) => (
-          <div key={name}>
-            {i === 0 ? (
-              <Compass size={20} />
-            ) : i === 1 ? (
-              <Eye size={20} />
-            ) : (
-              <Users size={20} />
-            )}
-            <span>{name}</span>
-            <small>YET TO EXPLORE</small>
-          </div>
-        ))}
       </div>
     </section>
   );
