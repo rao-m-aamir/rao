@@ -14,7 +14,7 @@ export const sections = [
   { id: "campfire", title: "The Campfire", label: "Contact", icon: "08" },
 ];
 export const socials = [
-  { name: "GitHub", href: "https://github.com/M-Aamir-Rao/" },
+  { name: "GitHub", href: "https://github.com/M-Aamir-Rao" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-aamir-rao" },
 ];
 export const skills = [
@@ -68,5 +68,14 @@ export const achievements = [
 export const sideQuests: {
   title: string;
   description: string;
-  href: string;
-}[] = [];
+  href?: string;
+}[] = [
+  {
+    title: "AFRIUM",
+    description: "Leading ventures and product launches.",
+  },
+  {
+    title: "DevCore",
+    description: "Running social media and marketing.",
+  },
+];

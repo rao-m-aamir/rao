@@ -449,7 +449,10 @@
   font-size: 1.5rem;
 }
 .milestone p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
+}
+.milestoneEntry + .milestoneEntry {
+  margin-top: 1.25rem;
 }
 .milestoneNote {
   font-size: 0.95rem;
@@ -505,6 +508,9 @@
 }
 .sideEmpty p {
   font-size: 0.95rem;
+}
+.sideEmpty article + article {
+  margin-top: 1.25rem;
 }
 .dottedTrail {
   font-family: var(--display);

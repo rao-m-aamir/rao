@@ -28,6 +28,7 @@ export const projects: Project[] = [
     title: "Ustad-e-Karigar",
     category: "ANDROID · AI · EVERYDAY IMPACT",
     accent: "mint",
+    sourceUrl: "https://github.com/M-Aamir-Rao/Ustad-e-Karigar",
     summary:
       "A digital ustad for the real world. Helping Pakistani repair workers and households diagnose, learn, and keep track of their work.",
     stack: ["Kotlin", "Jetpack Compose", "Gemini", "Room"],
@@ -73,6 +74,7 @@ export const projects: Project[] = [
     title: "Meadow & Wood",
     category: "WEB · DATABASES · CRAFT",
     accent: "wood",
+    sourceUrl: "https://github.com/M-Aamir-Rao/MeadowAndWood",
     summary:
       "A quieter kind of storefront. Cottagecore furniture meets a practical sales and inventory management system.",
     stack: ["PHP", "MySQL", "JavaScript", "CSS"],
