@@ -14,7 +14,7 @@ export const sections = [
   { id: "campfire", title: "The Campfire", label: "Contact", icon: "08" },
 ];
 export const socials = [
-  { name: "GitHub", href: "https://github.com/M-Aamir-Rao" },
+  { name: "GitHub", href: "https://github.com/rao-m-aamir" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-aamir-rao" },
 ];
 export const skills = [
