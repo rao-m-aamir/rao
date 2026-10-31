@@ -1,0 +1,233 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 80px;
+  padding: 1rem max(2rem, calc((100vw - 1280px) / 2));
+  border-bottom: 1px solid #e4e7ce24;
+  background: #152e2859;
+  backdrop-filter: blur(10px);
+  color: #f3f0d9;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+.brand > span {
+  font-family: var(--display);
+  font-size: 2rem;
+  line-height: 0.8;
+}
+.brandDot {
+  color: #dbc185;
+}
+.brand small {
+  display: block;
+  font-family: var(--body);
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+.links {
+  display: flex;
+  gap: 2rem;
+}
+.links a {
+  font-size: 0.78rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 44px;
+}
+.links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.actions button,
+.dialog button {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: inherit;
+}
+.motion {
+  border: 0;
+  width: 44px;
+}
+.mapButton {
+  border: 1px solid #d4dfbe6b;
+  gap: 0.6rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.7rem;
+}
+.mapButton:hover {
+  background: #dce4c31c;
+}
+.dialog {
+  color: #f5f1d8;
+  background: #142c28eb;
+  backdrop-filter: blur(15px);
+  width: min(640px, calc(100% - 2rem));
+  max-height: 90dvh;
+  border: 1px solid #c6d3ab80;
+  padding: 2rem;
+  box-shadow: 8px 8px 0 #0e242966;
+}
+.dialog::backdrop {
+  background: #0a1b215e;
+  backdrop-filter: blur(4px);
+}
+.dialogTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.dialogTop button {
+  border: 0;
+  min-width: 44px;
+}
+.dialog h2 {
+  margin: 1rem 0;
+}
+.dialog > p {
+  font-size: 0.85rem;
+  color: #d0dbca;
+}
+.destinations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+.destinations a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 80px;
+  padding: 0.8rem;
+  border: 1px solid #d5debe38;
+  text-decoration: none;
+}
+.destinations a:hover,
+.destinations a[aria-current] {
+  background: #bdc7911a;
+  border-color: #dce3b8;
+}
+.destinations a > span {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  color: #d9d2a4;
+}
+.destinations strong {
+  display: block;
+  font-size: 0.78rem;
+}
+.destinations small {
+  display: block;
+  font-size: 0.66rem;
+  color: #c0d2be;
+}
+.destinations svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.mapNote {
+  margin: 1.5rem 0 0;
+  font-style: italic;
+}
+.location {
+  position: fixed;
+  bottom: 1.3rem;
+  left: 1.5rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #e7e8c9;
+  background: #17322a9c;
+  border: 1px solid #d8e1b52b;
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 0.75rem;
+  pointer-events: none;
+}
+.location > span {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: #dfcc95;
+}
+.location strong {
+  display: block;
+  font-weight: 400;
+  font-size: 0.61rem;
+  letter-spacing: 0.12em;
+}
+.location small {
+  font-size: 0.53rem;
+  letter-spacing: 0.1em;
+  color: #c9d5bd;
+}
+@media (max-width: 800px) {
+  .header {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+  .links {
+    gap: 1rem;
+  }
+  .links a {
+    font-size: 0.7rem;
+  }
+  .brand small {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .links {
+    display: none;
+  }
+  .header {
+    min-height: 72px;
+    padding: 0.8rem 1.3rem;
+  }
+  .destinations {
+    grid-template-columns: 1fr;
+  }
+  .dialog {
+    padding: 1rem;
+  }
+  .mapButton {
+    padding: 0.4rem 0.7rem;
+  }
+  .dialog h2 {
+    font-size: 2.4rem;
+  }
+  .location {
+    bottom: 0.6rem;
+    left: 0.6rem;
+    padding: 0.35rem 0.6rem;
+  }
+  .location small {
+    display: none;
+  }
+  .location strong {
+    font-size: 0.53rem;
+  }
+}
