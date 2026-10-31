@@ -174,8 +174,7 @@ export function Unexplored() {
   return (
     <section id="unexplored" className={styles.unexplored}>
       <p className="eyebrow">07 / BEYOND THE EDGE OF THE MAP</p>
-      <h2>Unexplored territory.</h2>
-      <p>Whatever piques my curiosity.</p>
+      <h2>Whatever piques my curiosity.</h2>
       <div className={styles.interests}>
         {interests.map((name, i) => (
           <div key={name}>
@@ -187,7 +186,6 @@ export function Unexplored() {
               <Users size={20} />
             )}
             <span>{name}</span>
-            <small>YET TO EXPLORE</small>
           </div>
         ))}
       </div>
